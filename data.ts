@@ -54,6 +54,11 @@ export const socialLinks: SocialLink[] = [
   },
 ];
 
+export interface LinkSection {
+  title: string;
+  links: MainLink[];
+}
+
 export const mainLinks: MainLink[] = [
   {
     title: "Initial Consultation (Book Now)",
@@ -73,15 +78,28 @@ export const mainLinks: MainLink[] = [
     url: "https://www.theraflow-crm.ch/",
     icon: "Activity",
   },
+];
+
+export const linkSections: LinkSection[] = [
   {
-    title: "The Freud They Never Taught You (Ebook)",
-    subtitle: "Available on Gumroad",
-    url: "https://lopes2tech.gumroad.com/l/the-freud-they-never-taught-you",
-    icon: "BookOpen",
+    title: "Written Articles",
+    links: [
+      {
+        title: "The 8 Mental Steps You Need to Become an Entrepreneur",
+        url: "https://medium.com/@paulolopesreizinho/the-8-mental-steps-you-need-to-become-an-entrepreneur-8e671679de85",
+        icon: "BookOpen",
+      },
+    ],
   },
   {
-    title: "FinitoPro",
-    url: "https://www.finitopro.ch/",
-    icon: "Laptop",
+    title: "Shop",
+    links: [
+      {
+        title: "The Freud They Never Taught You (Ebook)",
+        subtitle: "Available on Gumroad",
+        url: "https://lopes2tech.gumroad.com/l/the-freud-they-never-taught-you",
+        icon: "BookOpen",
+      },
+    ],
   },
 ];
