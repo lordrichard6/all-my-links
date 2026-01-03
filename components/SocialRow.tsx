@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { socialLinks } from "@/data";
-import * as LucideIcons from "lucide-react";
+import { getIcon } from "@/components/CustomIcons";
 
 export default function SocialRow() {
   return (
@@ -13,11 +13,7 @@ export default function SocialRow() {
       className="flex justify-center gap-4 mt-8"
     >
       {socialLinks.map((social, index) => {
-        const IconComponent =
-          (LucideIcons[social.icon as keyof typeof LucideIcons] as React.ComponentType<{
-            className?: string;
-            size?: number;
-          }>) || LucideIcons.Link;
+        const IconComponent = getIcon(social.icon);
 
         return (
           <motion.a
@@ -31,7 +27,7 @@ export default function SocialRow() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             className="
-              w-10 h-10 rounded-xl
+              w-14 h-14 rounded-xl
               backdrop-blur-xl bg-white/5 border border-white/10
               flex items-center justify-center
               text-slate-400 hover:text-blue-400
@@ -40,7 +36,7 @@ export default function SocialRow() {
             "
             aria-label={social.name}
           >
-            <IconComponent size={18} />
+            <IconComponent size={24} />
           </motion.a>
         );
       })}

@@ -11,18 +11,29 @@ export default function ProfileHeader() {
       transition={{ duration: 0.6 }}
       className="text-center mb-8"
     >
-      {/* Avatar placeholder */}
+      {/* Avatar */}
       <motion.div
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-        className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-teal-500 p-0.5"
+        className="relative w-24 h-24 mx-auto mb-4 rounded-full p-0.5 bg-gradient-to-br from-blue-500 to-teal-500"
       >
-        <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center text-2xl font-bold text-white">
-          {profile.name
-            .split(" ")
-            .map((n) => n[0])
-            .join("")}
+        <div className="w-full h-full rounded-full overflow-hidden bg-slate-900 flex items-center justify-center relative">
+          {profile.avatar ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={profile.avatar}
+              alt={profile.name}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="text-2xl font-bold text-white">
+              {profile.name
+                .split(" ")
+                .map((n) => n[0])
+                .join("")}
+            </div>
+          )}
         </div>
       </motion.div>
 

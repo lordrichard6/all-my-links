@@ -3,6 +3,7 @@ export interface Profile {
   title: string;
   bio: string;
   location: string;
+  avatar?: string;
 }
 
 export interface SocialLink {
@@ -22,8 +23,9 @@ export interface MainLink {
 export const profile: Profile = {
   name: "Paulo Lopes",
   title: "AI Automation Specialist & Software Engineer",
-  bio: "Founder of Lopes2Tech. Building custom AI workflows & SaaS for therapists and service businesses.",
+  bio: "Websites, branding & automation for Swiss entrepreneurs · One partner from idea to growth | nDSG-Compliant",
   location: "Zurich, Switzerland",
+  avatar: "/avatar.png",
 };
 
 export const socialLinks: SocialLink[] = [
@@ -40,7 +42,7 @@ export const socialLinks: SocialLink[] = [
   {
     name: "Medium",
     url: "https://medium.com/@paulolopesreizinho",
-    icon: "BookOpen",
+    icon: "Medium",
   },
   {
     name: "Email",
@@ -61,22 +63,17 @@ export interface LinkSection {
 
 export const mainLinks: MainLink[] = [
   {
-    title: "Initial Consultation (Book Now)",
-    url: "https://cal.com/lopes2tech/initial-consult",
-    icon: "Calendar",
-    isPrimary: true,
-  },
-  {
     title: "Lopes2Tech (Agency)",
     subtitle: "AI Automation & Custom Software",
     url: "https://www.lopes2tech.ch/",
     icon: "Globe",
+    isPrimary: true,
   },
   {
-    title: "Theraflow CRM (SaaS)",
-    subtitle: "The CRM for Therapists & Clinics",
-    url: "https://www.theraflow-crm.ch/",
-    icon: "Activity",
+    title: "Chat on WhatsApp",
+    subtitle: "Direct message for quick questions",
+    url: "https://wa.me/41787989533",
+    icon: "MessageCircle",
   },
 ];
 
@@ -87,7 +84,7 @@ export const linkSections: LinkSection[] = [
       {
         title: "The 8 Mental Steps You Need to Become an Entrepreneur",
         url: "https://medium.com/@paulolopesreizinho/the-8-mental-steps-you-need-to-become-an-entrepreneur-8e671679de85",
-        icon: "BookOpen",
+        icon: "Medium",
       },
     ],
   },
@@ -98,7 +95,7 @@ export const linkSections: LinkSection[] = [
         title: "The Freud They Never Taught You (Ebook)",
         subtitle: "Available on Gumroad",
         url: "https://lopes2tech.gumroad.com/l/the-freud-they-never-taught-you",
-        icon: "BookOpen",
+        icon: "Medium",
       },
     ],
   },

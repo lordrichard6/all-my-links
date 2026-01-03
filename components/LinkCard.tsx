@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { MainLink } from "@/data";
 import * as LucideIcons from "lucide-react";
+import { getIcon } from "@/components/CustomIcons";
 
 interface LinkCardProps {
   link: MainLink;
@@ -10,12 +11,8 @@ interface LinkCardProps {
 }
 
 export default function LinkCard({ link, index }: LinkCardProps) {
-  // Dynamically get the icon component from lucide-react
-  const IconComponent =
-    (LucideIcons[link.icon as keyof typeof LucideIcons] as React.ComponentType<{
-      className?: string;
-      size?: number;
-    }>) || LucideIcons.Link;
+  // Dynamically get the icon component
+  const IconComponent = getIcon(link.icon);
 
   const isPrimary = link.isPrimary;
 
@@ -25,17 +22,35 @@ export default function LinkCard({ link, index }: LinkCardProps) {
       target="_blank"
       rel="noopener noreferrer"
       initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.7 + index * 0.1, duration: 0.5 }}
-      whileHover={{ scale: 1.02 }}
+      animate={isPrimary ? {
+        opacity: 1,
+        y: 0,
+        boxShadow: [
+          "0 0 0px rgba(6,182,212,0)",
+          "0 0 20px rgba(6,182,212,0.3)",
+          "0 0 0px rgba(6,182,212,0)"
+        ],
+        borderColor: [
+          "rgba(6,182,212,0.3)",
+          "rgba(6,182,212,0.8)",
+          "rgba(6,182,212,0.3)"
+        ]
+      } : { opacity: 1, y: 0 }}
+      transition={isPrimary ? {
+        opacity: { delay: 0.7 + index * 0.1, duration: 0.5 },
+        y: { delay: 0.7 + index * 0.1, duration: 0.5 },
+        boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+        borderColor: { duration: 2, repeat: Infinity, ease: "easeInOut" }
+      } : { delay: 0.7 + index * 0.1, duration: 0.5 }}
+      whileHover={{ scale: 1.02, boxShadow: isPrimary ? "0 0 30px rgba(6,182,212,0.6)" : "none" }}
       whileTap={{ scale: 0.98 }}
       className={`
         block w-full p-4 mb-3 rounded-2xl
         backdrop-blur-xl bg-white/5 border border-white/10
         transition-all duration-300
-        ${isPrimary ? "bg-gradient-to-r from-blue-500/20 to-teal-500/20 border-blue-500/30" : ""}
+        ${isPrimary ? "bg-gradient-to-r from-blue-900/40 to-cyan-900/40" : ""}
         hover:bg-white/10 hover:border-white/20
-        ${isPrimary ? "hover:from-blue-500/30 hover:to-teal-500/30" : ""}
+        ${isPrimary ? "hover:from-blue-900/50 hover:to-cyan-900/50" : ""}
       `}
     >
       <div className="flex items-center gap-3">
