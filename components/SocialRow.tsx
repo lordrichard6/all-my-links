@@ -33,8 +33,10 @@ export default function SocialRow() {
               text-slate-400 hover:text-blue-400
               hover:bg-white/10 hover:border-blue-500/30
               transition-all duration-300
+              focus:outline-none focus:ring-2 focus:ring-cyan-400/50 focus:ring-offset-2 focus:ring-offset-[#0a0a0a]
             "
             aria-label={social.name}
+            title={social.name}
           >
             <IconComponent size={24} />
           </motion.a>

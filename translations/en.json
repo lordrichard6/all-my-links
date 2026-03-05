@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "title": "AI Automation Specialist & Software Engineer",
+    "bio": "Websites, branding & automation for Swiss entrepreneurs \u00b7 One partner from idea to growth | nDSG-Compliant",
+    "location": "Zurich, Switzerland"
+  },
+  "mainLinks": {
+    "agency": { "title": "Lopes2Tech (Agency)", "subtitle": "AI Automation & Custom Software" }
+  },
+  "sections": {
+    "apps": "Apps",
+    "articles": "Written Articles",
+    "shop": "Shop"
+  },
+  "links": {
+    "clinika": { "title": "CliniKa OS", "subtitle": "Booking system for clinics" },
+    "darkmonkey": { "title": "Dark Monkey", "subtitle": "Gamified streetwear store" },
+    "medium": { "title": "Medium Blog (EN)", "subtitle": "Tech, entrepreneurship & expat life" },
+    "switzerland_en": { "title": "100 Things About Switzerland \u2014 As an Immigrant (EN)", "subtitle": "Available on Etsy \u00b7 \u20ac9.90" },
+    "switzerland_pt": { "title": "100 Coisas Sobre a Su\u00ed\u00e7a \u2014 Como Imigrante (PT)", "subtitle": "Available on Etsy \u00b7 \u20ac9.90" },
+    "freud": { "title": "The Freud They Never Taught You (EN)", "subtitle": "Available on Gumroad" }
+  }
+}

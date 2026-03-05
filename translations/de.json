@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "title": "KI-Automatisierungsspezialist & Software-Ingenieur",
+    "bio": "Websites, Branding & Automatisierung für Schweizer Unternehmer · Ein Partner von der Idee bis zum Wachstum | nDSG-konform",
+    "location": "Zürich, Schweiz"
+  },
+  "mainLinks": {
+    "agency": { "title": "Lopes2Tech (Agentur)", "subtitle": "KI-Automatisierung & Individuelle Software" }
+  },
+  "sections": {
+    "apps": "Apps",
+    "articles": "Artikel",
+    "shop": "Shop"
+  },
+  "links": {
+    "clinika": { "title": "CliniKa OS", "subtitle": "Buchungssystem für Kliniken" },
+    "darkmonkey": { "title": "Dark Monkey", "subtitle": "Gamifizierter Streetwear-Shop" },
+    "medium": { "title": "Medium Blog (EN)", "subtitle": "Technologie, Unternehmertum & Expat-Leben" },
+    "switzerland_en": { "title": "100 Things About Switzerland — As an Immigrant (EN)", "subtitle": "Erhältlich auf Etsy · €9.90" },
+    "switzerland_pt": { "title": "100 Coisas Sobre a Suíça — Como Imigrante (PT)", "subtitle": "Erhältlich auf Etsy · €9.90" },
+    "freud": { "title": "Der Freud, den man dir nie beigebracht hat (EN)", "subtitle": "Erhältlich auf Gumroad" }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "profile": {
+    "title": "Especialista em Automação com IA & Engenheiro de Software",
+    "bio": "Websites, branding e automação para empreendedores na Suíça · Um parceiro da ideia ao crescimento | Conforme nDSG",
+    "location": "Zurique, Suíça"
+  },
+  "mainLinks": {
+    "agency": { "title": "Lopes2Tech (Agência)", "subtitle": "Automação com IA & Software Personalizado" }
+  },
+  "sections": {
+    "apps": "Aplicações",
+    "articles": "Artigos",
+    "shop": "Loja"
+  },
+  "links": {
+    "clinika": { "title": "CliniKa OS", "subtitle": "Sistema de marcações para clínicas" },
+    "darkmonkey": { "title": "Dark Monkey", "subtitle": "Loja de streetwear gamificada" },
+    "medium": { "title": "Blog no Medium (EN)", "subtitle": "Tecnologia, empreendedorismo e vida de expatriado" },
+    "switzerland_en": { "title": "100 Things About Switzerland — As an Immigrant (EN)", "subtitle": "Disponível no Etsy · €9.90" },
+    "switzerland_pt": { "title": "100 Coisas Sobre a Suíça — Como Imigrante (PT)", "subtitle": "Disponível no Etsy · €9.90" },
+    "freud": { "title": "O Freud Que Nunca Te Ensinaram (EN)", "subtitle": "Disponível no Gumroad" }
+  }
+}

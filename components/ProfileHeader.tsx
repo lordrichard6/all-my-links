@@ -1,9 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { profile } from "@/data";
+import { useLocale } from "@/lib/locale";
+import { getProfile } from "@/data";
 
 export default function ProfileHeader() {
+  const { t } = useLocale();
+  const profile = getProfile(t);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: -20 }}

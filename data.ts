@@ -1,3 +1,5 @@
+import type { Translations } from "@/lib/locale";
+
 export interface Profile {
   name: string;
   title: string;
@@ -20,13 +22,10 @@ export interface MainLink {
   isPrimary?: boolean;
 }
 
-export const profile: Profile = {
-  name: "Paulo Lopes",
-  title: "AI Automation Specialist & Software Engineer",
-  bio: "Websites, branding & automation for Swiss entrepreneurs · One partner from idea to growth | nDSG-Compliant",
-  location: "Zurich, Switzerland",
-  avatar: "/avatar.png",
-};
+export interface LinkSection {
+  title: string;
+  links: MainLink[];
+}
 
 export const socialLinks: SocialLink[] = [
   {
@@ -40,11 +39,6 @@ export const socialLinks: SocialLink[] = [
     icon: "Instagram",
   },
   {
-    name: "Medium",
-    url: "https://medium.com/@paulolopesreizinho",
-    icon: "Medium",
-  },
-  {
     name: "Email",
     url: "mailto:paulo@lopes2tech.ch",
     icon: "Mail",
@@ -52,51 +46,84 @@ export const socialLinks: SocialLink[] = [
   {
     name: "WhatsApp",
     url: "https://wa.me/41787989533",
-    icon: "MessageCircle",
+    icon: "WhatsApp",
   },
 ];
 
-export interface LinkSection {
-  title: string;
-  links: MainLink[];
+export function getProfile(t: Translations): Profile {
+  return {
+    name: "Paulo Lopes",
+    title: t.profile.title,
+    bio: t.profile.bio,
+    location: t.profile.location,
+    avatar: "/avatar.png",
+  };
 }
 
-export const mainLinks: MainLink[] = [
-  {
-    title: "Lopes2Tech (Agency)",
-    subtitle: "AI Automation & Custom Software",
-    url: "https://www.lopes2tech.ch/",
-    icon: "Globe",
-    isPrimary: true,
-  },
-  {
-    title: "Chat on WhatsApp",
-    subtitle: "Direct message for quick questions",
-    url: "https://wa.me/41787989533",
-    icon: "MessageCircle",
-  },
-];
+export function getMainLinks(t: Translations): MainLink[] {
+  return [
+    {
+      title: t.mainLinks.agency.title,
+      subtitle: t.mainLinks.agency.subtitle,
+      url: "https://www.lopes2tech.ch/",
+      icon: "Globe",
+      isPrimary: true,
+    },
+  ];
+}
 
-export const linkSections: LinkSection[] = [
-  {
-    title: "Written Articles",
-    links: [
-      {
-        title: "The 8 Mental Steps You Need to Become an Entrepreneur",
-        url: "https://medium.com/@paulolopesreizinho/the-8-mental-steps-you-need-to-become-an-entrepreneur-8e671679de85",
-        icon: "Medium",
-      },
-    ],
-  },
-  {
-    title: "Shop",
-    links: [
-      {
-        title: "The Freud They Never Taught You (Ebook)",
-        subtitle: "Available on Gumroad",
-        url: "https://lopes2tech.gumroad.com/l/the-freud-they-never-taught-you",
-        icon: "Medium",
-      },
-    ],
-  },
-];
+export function getLinkSections(t: Translations): LinkSection[] {
+  return [
+    {
+      title: t.sections.apps,
+      links: [
+        {
+          title: t.links.clinika.title,
+          subtitle: t.links.clinika.subtitle,
+          url: "https://www.clinika-os.ch",
+          icon: "CalendarCheck",
+        },
+        {
+          title: t.links.darkmonkey.title,
+          subtitle: t.links.darkmonkey.subtitle,
+          url: "https://www.dark-monkey.ch",
+          icon: "ShoppingBag",
+        },
+      ],
+    },
+    {
+      title: t.sections.articles,
+      links: [
+        {
+          title: t.links.medium.title,
+          subtitle: t.links.medium.subtitle,
+          url: "https://medium.com/@paulolopesreizinho",
+          icon: "Medium",
+        },
+      ],
+    },
+    {
+      title: t.sections.shop,
+      links: [
+        {
+          title: t.links.switzerland_en.title,
+          subtitle: t.links.switzerland_en.subtitle,
+          url: "https://lopes2techstudio.etsy.com/listing/4466681235/moving-to-switzerland-guide-100-things",
+          icon: "BookOpen",
+        },
+        {
+          title: t.links.switzerland_pt.title,
+          subtitle: t.links.switzerland_pt.subtitle,
+          url: "https://lopes2techstudio.etsy.com/listing/4467132687/100-coisas-sobre-a-suica-guia-imigrante",
+          icon: "BookOpen",
+        },
+        {
+          title: t.links.freud.title,
+          subtitle: t.links.freud.subtitle,
+          url: "https://lopes2tech.gumroad.com/l/the-freud-they-never-taught-you",
+          icon: "BookOpen",
+        },
+      ],
+    },
+  ];
+}
